@@ -1,0 +1,53 @@
+@import "./helpers/reset";
+
+* {
+  box-sizing: border-box;
+}
+
+body > div {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.board {
+  border: solid 4px black;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square-wrapper {
+  width: 12.5%;
+  height: 12.5%;
+
+  .square-inner-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .square {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.knight {
+  font-size: 70px;
+  font-weight: bold;
+  cursor: move;
+}
+
+.is-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  opacity: 0.5;
+}
